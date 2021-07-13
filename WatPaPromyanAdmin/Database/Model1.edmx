@@ -1,0 +1,282 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="WatPaPromyanModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="tb_m_banner">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="name1" Type="varchar" MaxLength="50" />
+          <Property Name="img1" Type="varbinary(max)" />
+          <Property Name="name2" Type="varchar" MaxLength="50" />
+          <Property Name="img2" Type="varbinary(max)" />
+          <Property Name="name3" Type="varchar" MaxLength="50" />
+          <Property Name="img3" Type="varbinary(max)" />
+          <Property Name="active" Type="bit" />
+          <Property Name="createDate" Type="datetime" />
+          <Property Name="createBy" Type="varchar" MaxLength="50" />
+          <Property Name="modifyDate" Type="datetime" />
+          <Property Name="modifyBy" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tb_m_img_menu_detail">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fileName" Type="varchar(max)" />
+          <Property Name="fileByte" Type="varbinary(max)" />
+          <Property Name="menuDetailId" Type="varchar" MaxLength="50" />
+          <Property Name="active" Type="bit" />
+          <Property Name="createDate" Type="datetime" />
+          <Property Name="createBy" Type="varchar" MaxLength="50" />
+          <Property Name="modifyDate" Type="datetime" />
+          <Property Name="modifyBy" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tb_m_img_menu_detail_banner">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fileName" Type="varchar(max)" />
+          <Property Name="fileByte" Type="varbinary(max)" />
+          <Property Name="menuDetailId" Type="varchar" MaxLength="50" />
+          <Property Name="active" Type="bit" />
+          <Property Name="createDate" Type="datetime" />
+          <Property Name="createBy" Type="varchar" MaxLength="50" />
+          <Property Name="modifyDate" Type="datetime" />
+          <Property Name="modifyBy" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="tb_m_menu">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="nameMenu" Type="varchar" MaxLength="100" />
+          <Property Name="fileName" Type="varchar(max)" />
+          <Property Name="fileByte" Type="varbinary(max)" />
+          <Property Name="active" Type="bit" />
+          <Property Name="createDate" Type="datetime" />
+          <Property Name="createBy" Type="varchar" MaxLength="50" />
+          <Property Name="modifyDate" Type="datetime" />
+          <Property Name="modifyBy" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'WatPaPromyan.dbo.tb_m_menu_detail' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="tb_m_menu_detail">
+          <Property Name="id" Type="varchar" MaxLength="50" />
+          <Property Name="detail1" Type="varchar(max)" />
+          <Property Name="detail2" Type="varchar(max)" />
+          <Property Name="detail3" Type="varchar(max)" />
+          <Property Name="detail4" Type="varchar(max)" />
+          <Property Name="detail5" Type="varchar(max)" />
+          <Property Name="menuId" Type="varchar" MaxLength="50" />
+          <Property Name="menuSubId" Type="varchar" MaxLength="50" />
+          <Property Name="menuTrimId" Type="varchar" MaxLength="50" />
+          <Property Name="active" Type="bit" />
+          <Property Name="createDate" Type="datetime" />
+          <Property Name="createBy" Type="varchar" MaxLength="50" />
+          <Property Name="modifyDate" Type="datetime" />
+          <Property Name="modifyBy" Type="varchar" MaxLength="50" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'WatPaPromyan.dbo.tb_m_menu_sub' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="tb_m_menu_sub">
+          <Property Name="id" Type="varchar" MaxLength="50" />
+          <Property Name="nameMenu" Type="varchar" MaxLength="100" />
+          <Property Name="fileName" Type="varchar(max)" />
+          <Property Name="fileByte" Type="varbinary(max)" />
+          <Property Name="menuId" Type="varchar" MaxLength="50" />
+          <Property Name="active" Type="bit" />
+          <Property Name="createDate" Type="datetime" />
+          <Property Name="createBy" Type="varchar" MaxLength="50" />
+          <Property Name="modifyDate" Type="datetime" />
+          <Property Name="modifyBy" Type="varchar" MaxLength="50" />
+        </EntityType>-->
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'WatPaPromyan.dbo.tb_m_menu_trim' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="tb_m_menu_trim">
+          <Property Name="id" Type="varchar" MaxLength="50" />
+          <Property Name="nameMenu" Type="varchar" MaxLength="100" />
+          <Property Name="fileName" Type="varchar(max)" />
+          <Property Name="fileByte" Type="varbinary(max)" />
+          <Property Name="menuId" Type="varchar" MaxLength="50" />
+          <Property Name="menuSubId" Type="varchar" MaxLength="50" />
+          <Property Name="active" Type="bit" />
+          <Property Name="createDate" Type="datetime" />
+          <Property Name="createBy" Type="varchar" MaxLength="50" />
+          <Property Name="modifyDate" Type="datetime" />
+          <Property Name="modifyBy" Type="varchar" MaxLength="50" />
+        </EntityType>-->
+        <EntityContainer Name="WatPaPromyanModelStoreContainer">
+          <EntitySet Name="tb_m_banner" EntityType="Self.tb_m_banner" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_m_img_menu_detail" EntityType="Self.tb_m_img_menu_detail" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_m_img_menu_detail_banner" EntityType="Self.tb_m_img_menu_detail_banner" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="tb_m_menu" EntityType="Self.tb_m_menu" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="WatPaPromyanModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="tb_m_banner">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="name1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="img1" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="name2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="img2" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="name3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="img3" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="active" Type="Boolean" />
+          <Property Name="createDate" Type="DateTime" Precision="3" />
+          <Property Name="createBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="modifyDate" Type="DateTime" Precision="3" />
+          <Property Name="modifyBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tb_m_img_menu_detail">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fileName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="fileByte" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="menuDetailId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="active" Type="Boolean" />
+          <Property Name="createDate" Type="DateTime" Precision="3" />
+          <Property Name="createBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="modifyDate" Type="DateTime" Precision="3" />
+          <Property Name="modifyBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tb_m_img_menu_detail_banner">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fileName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="fileByte" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="menuDetailId" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="active" Type="Boolean" />
+          <Property Name="createDate" Type="DateTime" Precision="3" />
+          <Property Name="createBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="modifyDate" Type="DateTime" Precision="3" />
+          <Property Name="modifyBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="tb_m_menu">
+          <Key>
+            <PropertyRef Name="id" />
+          </Key>
+          <Property Name="id" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="nameMenu" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="fileName" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+          <Property Name="fileByte" Type="Binary" MaxLength="Max" FixedLength="false" />
+          <Property Name="active" Type="Boolean" />
+          <Property Name="createDate" Type="DateTime" Precision="3" />
+          <Property Name="createBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="modifyDate" Type="DateTime" Precision="3" />
+          <Property Name="modifyBy" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="WatPaPromyanEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="tb_m_banner" EntityType="Self.tb_m_banner" />
+          <EntitySet Name="tb_m_img_menu_detail" EntityType="Self.tb_m_img_menu_detail" />
+          <EntitySet Name="tb_m_img_menu_detail_banner" EntityType="Self.tb_m_img_menu_detail_banner" />
+          <EntitySet Name="tb_m_menu" EntityType="Self.tb_m_menu" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="WatPaPromyanModelStoreContainer" CdmEntityContainer="WatPaPromyanEntities">
+          <EntitySetMapping Name="tb_m_banner">
+            <EntityTypeMapping TypeName="WatPaPromyanModel.tb_m_banner">
+              <MappingFragment StoreEntitySet="tb_m_banner">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="name1" ColumnName="name1" />
+                <ScalarProperty Name="img1" ColumnName="img1" />
+                <ScalarProperty Name="name2" ColumnName="name2" />
+                <ScalarProperty Name="img2" ColumnName="img2" />
+                <ScalarProperty Name="name3" ColumnName="name3" />
+                <ScalarProperty Name="img3" ColumnName="img3" />
+                <ScalarProperty Name="active" ColumnName="active" />
+                <ScalarProperty Name="createDate" ColumnName="createDate" />
+                <ScalarProperty Name="createBy" ColumnName="createBy" />
+                <ScalarProperty Name="modifyDate" ColumnName="modifyDate" />
+                <ScalarProperty Name="modifyBy" ColumnName="modifyBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_m_img_menu_detail">
+            <EntityTypeMapping TypeName="WatPaPromyanModel.tb_m_img_menu_detail">
+              <MappingFragment StoreEntitySet="tb_m_img_menu_detail">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="fileName" ColumnName="fileName" />
+                <ScalarProperty Name="fileByte" ColumnName="fileByte" />
+                <ScalarProperty Name="menuDetailId" ColumnName="menuDetailId" />
+                <ScalarProperty Name="active" ColumnName="active" />
+                <ScalarProperty Name="createDate" ColumnName="createDate" />
+                <ScalarProperty Name="createBy" ColumnName="createBy" />
+                <ScalarProperty Name="modifyDate" ColumnName="modifyDate" />
+                <ScalarProperty Name="modifyBy" ColumnName="modifyBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_m_img_menu_detail_banner">
+            <EntityTypeMapping TypeName="WatPaPromyanModel.tb_m_img_menu_detail_banner">
+              <MappingFragment StoreEntitySet="tb_m_img_menu_detail_banner">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="fileName" ColumnName="fileName" />
+                <ScalarProperty Name="fileByte" ColumnName="fileByte" />
+                <ScalarProperty Name="menuDetailId" ColumnName="menuDetailId" />
+                <ScalarProperty Name="active" ColumnName="active" />
+                <ScalarProperty Name="createDate" ColumnName="createDate" />
+                <ScalarProperty Name="createBy" ColumnName="createBy" />
+                <ScalarProperty Name="modifyDate" ColumnName="modifyDate" />
+                <ScalarProperty Name="modifyBy" ColumnName="modifyBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="tb_m_menu">
+            <EntityTypeMapping TypeName="WatPaPromyanModel.tb_m_menu">
+              <MappingFragment StoreEntitySet="tb_m_menu">
+                <ScalarProperty Name="id" ColumnName="id" />
+                <ScalarProperty Name="nameMenu" ColumnName="nameMenu" />
+                <ScalarProperty Name="fileName" ColumnName="fileName" />
+                <ScalarProperty Name="fileByte" ColumnName="fileByte" />
+                <ScalarProperty Name="active" ColumnName="active" />
+                <ScalarProperty Name="createDate" ColumnName="createDate" />
+                <ScalarProperty Name="createBy" ColumnName="createBy" />
+                <ScalarProperty Name="modifyDate" ColumnName="modifyDate" />
+                <ScalarProperty Name="modifyBy" ColumnName="modifyBy" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
